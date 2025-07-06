@@ -60,6 +60,16 @@ img.enemy-pic {
     box-shadow: 0 0 4px #222;
 }
 
+img.nav-pic {
+    display: block;
+    margin: 0.5em auto 0;
+    max-width: 40%;
+    max-height: 40%;
+    object-fit: contain;
+    border: 1px solid #333;
+    box-shadow: 0 0 4px #222;
+}
+
 /* Optional: tactical code stamp look */
 code {
     background: #222;
