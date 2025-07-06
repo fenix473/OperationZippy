@@ -72,7 +72,6 @@ img.nav-pic,
 img {
     display: block;
     width: 80%;          /* same visual width */
-    max-width: 480px;    /* cap on large screens */
     height: auto;
     margin: 1rem auto;   /* stacked vertically, centered */
     object-fit: contain; /* maintain aspect */
