@@ -1,78 +1,83 @@
-/* ================================
-   CLASSIFIED VISUAL STYLESHEET
-   OPERATION: CROSS ROPE
-   AUTH: CLEARANCE LEVEL 5+
-   ================================ */
+/* =========================================
+   OPERATION: CROSS ROPE – RETRO DOSSIER CSS
+   ========================================= */
+
+:root {
+    --paper-bg: #f1e8d0;      /* aged paper */
+    --ink-dark: #24201b;      /* typewriter ink */
+    --accent:   #9b6200;      /* faded stamp/marker */
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
 
 body {
-    font-family: 'Courier New', monospace;
-    background-color: #0b0b0b;
-    color: #e0e0e0;
-    line-height: 1.6;
-    margin: 2em;
-    letter-spacing: 0.05em;
-    background-image: radial-gradient(#111 1px, transparent 0);
-    background-size: 25px 25px;
+    font-family: "Courier Prime", "Courier New", monospace;
+    background: var(--paper-bg);
+    color: var(--ink-dark);
+    line-height: 1.55;
+    padding: 2rem clamp(1rem, 4vw, 4rem);
+    /* subtle paper grain */
+    background-image:
+        linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,0,0,0.035) 1px, transparent 1px);
+    background-size: 100% 26px, 26px 100%;
 }
 
 h1, h2 {
-    color: #00ffe0;
     text-transform: uppercase;
-    border-bottom: 1px dashed #00ffe0;
-    padding-bottom: 0.2em;
-    margin-bottom: 1em;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--ink-dark);
+    border-bottom: 2px dashed var(--accent);
+    padding-bottom: 0.25rem;
 }
 
 table {
     width: 100%;
-    table-layout: fixed;
     border-collapse: collapse;
-    margin-top: 2em;
-    background-color: #161616;
-    box-shadow: 0 0 12px #00ffe055;
+    margin-block: 2rem;
 }
 
 th, td {
-    border: 1px solid #333;
-    padding: 0.75em;
+    border: 1px solid rgba(0,0,0,0.25);
+    padding: 0.75rem 0.5rem;
     text-align: center;
     font-size: 0.95em;
     vertical-align: top;
 }
 
 th {
-    background-color: #1e1e1e;
-    color: #ff5f1f;
-    text-shadow: 1px 1px 2px #000;
+    background: rgba(0,0,0,0.08);
+    color: var(--accent);
 }
 
 tr:nth-child(even) {
-    background-color: #1a1a1a;
+    background: rgba(0,0,0,0.04);
 }
 
-img.enemy-pic {
+/* =========  IMAGES  ========= */
+img.enemy-pic,
+img.nav-pic,
+img {
     display: block;
-    margin: 0.5em auto 0;
-    max-width: 100%;
-    max-height: 140px;
-    object-fit: contain;
+    width: 60%;          /* same visual width */
+    max-width: 280px;    /* cap on large screens */
+    height: auto;
+    margin: 1rem auto;   /* stacked vertically, centered */
+    object-fit: contain; /* maintain aspect */
+    border: none;        /* no boxes */
+    box-shadow: none;
 }
 
-img.nav-pic {
-    display: block;
-    margin: 0.5em auto 0;
-    max-width: 40%;
-    max-height: 40%;
-    object-fit: contain;
-    border: 1px solid #333;
-    box-shadow: 0 0 4px #222;
-}
-
-/* Optional: tactical code stamp look */
+/* optional inline “redacted code” look */
 code {
-    background: #222;
-    color: #0ff;
-    padding: 0.2em 0.4em;
-    border-radius: 4px;
-    font-family: monospace;
+    background: rgba(0,0,0,0.12);
+    padding: 0.1em 0.3em;
+    border-radius: 3px;
+    color: var(--ink-dark);
 }
