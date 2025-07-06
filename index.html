@@ -29,7 +29,6 @@
             border: 1px solid #444;
             padding: 0.5em;
             text-align: left;
-            align-content: center;
         }
         th {
             background-color: #222;
@@ -37,6 +36,13 @@
         }
         tr:nth-child(even) {
             background-color: #222;
+        }
+        .enemy-pic {
+            display: block;          /* starts on its own line */
+            margin: 0.3em auto 0;    /* auto left/right = horizontally centred */
+            max-width: 100%;
+            max-height: 40%;
+            object-fit: contain;
         }
     </style>
 </head>
@@ -70,7 +76,7 @@
         <tbody>
             <tr>
                 <td>Image</td>
-                <td><img src ="pictures/puffie.WEBP"></td>
+                <td><img src ="pictures/puffie.WEBP" class="enemy-pic"></td>
                 <td><img src ="pictures/Fingers.WEBP"></td>
                 <td><img src ="pictures/Twins.WEBP"></td>
                 <td><img src ="pictures/BabyMutant.WEBP"></td>
