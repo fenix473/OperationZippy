@@ -71,7 +71,7 @@ img.enemy-pic {
 img.nav-pic,
 img {
     display: block;
-    width: 65%;          /* same visual width */
+    width: 50%;          /* same visual width */
     height: auto;
     margin: 1rem auto;   /* stacked vertically, centered */
     object-fit: contain; /* maintain aspect */
