@@ -61,7 +61,13 @@ tr:nth-child(even) {
 }
 
 /* =========  IMAGES  ========= */
-img.enemy-pic,
+img.enemy-pic {
+    display: block;
+    margin: 0.5em auto;
+    height: 200px;           /* Fixed height for uniformity */
+    max-width: 100%;         /* Avoid overflow */
+    object-fit: contain;     /* Keep proportions */
+}
 img.nav-pic,
 img {
     display: block;
